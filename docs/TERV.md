@@ -27,7 +27,7 @@ classDiagram
         <<abstract>>
         -string name
         -Vector C
-        +Shape(string name, Vector C, Vector V)
+        +Shape(string name, Vector C)
         +virtual double area()
         +virtual double perimeter()
         +virtual bool contains(Vector v)
@@ -58,7 +58,9 @@ classDiagram
     }
 
     class ShapeManager {
-        -Shape*[] shapes
+        -Shape** shapes
+        -size_t len
+        -size_t capacity 
         +bool addShape(Shape* s)
         +bool deleteShape(string name)
         +Shape* find(string name)
@@ -105,6 +107,6 @@ Poliginok oldalai ngybetűvel, sorban jelölve ($A,B, C, \dots$), kérdéses pon
 - Ha $0 < x < 1$ és $0 < y < 1$, $v$ a négyzeten belül van.
 
 
-## 5. Parancsfeldolgozás — rövid felvázolás
+## 5. Parancsfeldolgozás - rövid felvázolás
 - `CommandParser::handle(line)` tokenizálja a sorokat (szóközzel), majd switch/case a parancsokra (`add`, `list`, `delete`, `contains`, `area|a`, `perimeter|v`, `load`).
 - Amennyiben nem talál mgfelelő parancsot, megfelelő hibát ír.
