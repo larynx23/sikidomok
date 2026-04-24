@@ -1,0 +1,18 @@
+# Build artifacts
+*.o
+*.obj
+*.out
+*.exe
+*.zip
+
+# Main binary
+sikidomok
+
+# Build directories
+build/
+
+# IDE and editor files
+.vscode/
+
+# OS files
+.DS_Store
