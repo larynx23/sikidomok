@@ -13,9 +13,12 @@ private:
 public:
     CommandParser(ShapeManager& m);
 
+    Command stringToCommand(const std::string& command);
     void handle(const std::string& line);
+};
 
-    friend std::istream& operator>>(std::istream& is, CommandParser& parser);
+enum Command {
+    Add, List, Delete, Contains, Perimeter, Area, Load, Invalid
 };
 
 #endif

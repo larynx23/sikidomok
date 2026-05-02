@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "ShapeManager.hpp"
 
 ShapeManager::ShapeManager() : len(0), capacity(16) {
