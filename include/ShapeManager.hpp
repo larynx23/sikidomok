@@ -1,7 +1,7 @@
 #ifndef SHAPEMANAGER_H
 #define SHAPEMANAGER_H
 
-#include <cstddef>
+#include <iostream>
 #include <string>
 
 #include "Shape.hpp"
@@ -18,6 +18,7 @@ public:
 
     bool addShape(Shape* s);
     bool deleteShape(const std::string& name);
+    int findIndex(const std::string& name) const;
     Shape* find(const std::string& name) const;
 
     std::size_t size() const;
