@@ -25,4 +25,4 @@ clean:
 
 zip:
 	rm -f $(ZIP_NAME)
-	zip -r $(ZIP_NAME) $(ZIP_FILES)
+	zip -j $(ZIP_NAME) $(ZIP_FILES)

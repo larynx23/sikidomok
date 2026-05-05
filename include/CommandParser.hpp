@@ -5,6 +5,9 @@
 #include <string>
 
 #include "ShapeManager.hpp"
+enum Command {
+    Add, List, Delete, Contains, Perimeter, Area, Load, Invalid
+};
 
 class CommandParser {
 private:
@@ -15,10 +18,6 @@ public:
 
     Command stringToCommand(const std::string& command);
     void handle(const std::string& line);
-};
-
-enum Command {
-    Add, List, Delete, Contains, Perimeter, Area, Load, Invalid
 };
 
 #endif
