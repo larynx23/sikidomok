@@ -16,6 +16,7 @@ public:
 
     double length() const;
     double distance(const Vector& v) const;
+    Vector rotate(double angle) const;
 
     Vector operator+(const Vector& v) const;
     Vector operator-(const Vector& v) const;

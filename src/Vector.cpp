@@ -12,6 +12,12 @@ double Vector::distance(const Vector& v) const {
     return temp.length();
 }
 
+Vector Vector::rotate(double angle) const {
+    double rotatedX = x * std::cos(angle) - y * std::sin(angle);
+    double rotatedY = x * std::sin(angle) + y * std::cos(angle);
+    return Vector(rotatedX, rotatedY);
+}
+
 Vector Vector::operator+(const Vector& v) const {
     return Vector(x + v.getX(), y + v.getY());
 }
