@@ -10,6 +10,10 @@ private:
 
 public:
     Vector(double x = 0.0, double y = 0.0);
+    Vector(const Vector& other) = default;
+    Vector(Vector&& other) = default;
+    Vector& operator=(const Vector& other) = default;
+    Vector& operator=(Vector&& other) = default;
 
     double getX() const;
     double getY() const;

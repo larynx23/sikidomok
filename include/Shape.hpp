@@ -2,7 +2,8 @@
 #define SHAPE_H
 
 #include <string>
-#include <ostream>
+#include <iostream>
+#include <cmath>
 
 #include "Vector.hpp"
 
