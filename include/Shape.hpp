@@ -2,6 +2,7 @@
 #define SHAPE_H
 
 #include <string>
+#include <ostream>
 
 #include "Vector.hpp"
 
@@ -20,6 +21,7 @@ public:
     virtual double area() const = 0;
     virtual double perimeter() const = 0;
     virtual bool contains(const Vector& v) const = 0;
+    virtual void print() const = 0;
 };
 
 #endif

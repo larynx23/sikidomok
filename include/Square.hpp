@@ -13,6 +13,7 @@ public:
     double area() const;
     double perimeter() const;
     bool contains(const Vector& v) const;
+    void print() const override;
 };
 
 #endif

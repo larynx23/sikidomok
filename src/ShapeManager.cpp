@@ -60,3 +60,8 @@ bool ShapeManager::deleteShape(const std::string& name) {
 std::size_t ShapeManager::size() const {
     return len;
 }
+
+void ShapeManager::list() {
+    for (std::size_t i = 0; i < len; i++)
+        shapes[i]->print();
+}

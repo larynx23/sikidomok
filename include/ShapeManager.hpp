@@ -20,6 +20,7 @@ public:
     bool deleteShape(const std::string& name);
     int findIndex(const std::string& name) const;
     Shape* find(const std::string& name) const;
+    void list();
 
     std::size_t size() const;
 };
