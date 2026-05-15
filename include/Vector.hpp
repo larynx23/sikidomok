@@ -1,6 +1,8 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
+#include <ostream>
+
 class Vector {
 private:
     double x;
@@ -20,6 +22,8 @@ public:
     Vector operator*(double s) const;
     double operator*(const Vector& v) const;
     bool operator==(const Vector& v) const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Vector& v);
 };
 
 #endif
