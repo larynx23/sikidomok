@@ -34,6 +34,10 @@ bool Vector::operator==(const Vector& v) const {
     return x == v.getX() && y == v.getY();
 }
 
+double Vector::cross(const Vector& v) const {
+    return x * v.getY() - y * v.getX();
+}
+
 std::ostream& operator<<(std::ostream& os, const Vector& v) {
     os << "(" << v.x << ", " << v.y << ")";
     return os;
