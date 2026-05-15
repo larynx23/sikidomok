@@ -4,7 +4,7 @@ header-includes:
   - \setlist[itemize,2]{label=$\circ$}
 ---
 
-# Specifikáció — Síkidomok
+# Specifikáció - Síkidomok
 ### Vadoba Hunor
 
 
@@ -24,12 +24,12 @@ A program feladata: síkidomok (kör, háromszög, négyzet) definiálása. Ezen
 ## Pontok, tulajdonságok
 - `C (cx,cy)`: az alakzat középpontja.
 - `V (vx,vy)`: referenciapont, alakzattól függő jelentéssel:
-  - `circle`: `V` a kör kerületén lévő pont — a sugár R = dist(C,V).
+  - `circle`: `V` a kör kerületén lévő pont - a sugár R = dist(C,V).
   - `triangle` és `square`: `V` egy csúcs koordinátája.
 - `R`: az alakzat sugara (`C` és `V` távolsága)
 
 
-## Parancsok — pontos szintaxis és példák
+## Parancsok - pontos szintaxis és példák
 Minden parancs egy sorban, mezők szóközzel elválasztva. A parancsok pontos szintaxisa:
 
 - `add <type> <name> <cx> <cy> <vx> <vy>`
@@ -50,12 +50,12 @@ Minden parancs egy sorban, mezők szóközzel elválasztva. A parancsok pontos s
   - Megadja a megadott alakzat területét.
   - Példa: `a t1`
 - Fájl beolvasása parancssorból:
-  - `load <filename>` — a fájl sorait ugyanazzal a mezőfelépítéssel várja, mint az `add` parancs paraméterei.
+  - `load <filename>` - a fájl sorait ugyanazzal a mezőfelépítéssel várja, mint az `add` parancs paraméterei.
 
 Minden parancs pontosan a fenti token-szintaxist várja; további szóközök megengedettek, de mezők sorrendét és számát be kell tartani.
 
 
-## Kimeneti formátum — pontos formátum és példák
+## Kimeneti formátum - pontos formátum és példák
 - `add`: siker esetén `OK: added <name>`; hiba esetén `ERROR: <message>`.
 - `list`: minden sor: `<name>: <type> <cx> <cy> <vx> <vy>` (szóközökkel elválasztva).
 - `delete`: siker: `OK: deleted <name>`; ha nincs ilyen: `ERROR: unknown shape '<name>'`.
@@ -65,7 +65,7 @@ Minden parancs pontosan a fenti token-szintaxist várja; további szóközök me
 - `load`: siker: `OK: loaded <n> shapes from <filename>`; hiba példák: `ERROR: file not found '<filename>'`, `ERROR: parse error on line <k>: <reason>`.
 
 
-## Hibakezelés — pontos hibaüzenetek
+## Hibakezelés - pontos hibaüzenetek
 - Duplikált név: `ERROR: duplicate shape '<name>'`.
 - Hibás számformátum: `ERROR: invalid number or not a number`.
 - Ismeretlen parancs: `ERROR: unknown command '<cmd>'`.
